@@ -1,15 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ítalo Santos - Desenvolvedor Front-end e Suporte</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
 
   body {
     margin: 0;
@@ -21,40 +18,46 @@
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    animation: fadeIn 1s ease-in forwards;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
   }
 
   .container {
-    max-width: 520px;
+    max-width: 680px;
     width: 100%;
     background: #142d4c;
     border-radius: 16px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     padding: 40px 30px;
     text-align: center;
-    animation: slideUp 1s ease forwards;
   }
 
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3e6ccf;
+    margin-bottom: 20px;
   }
 
   h1 {
     font-size: 2.2rem;
-    margin-bottom: 8px;
-    color: #f0f4f8;
+    margin-bottom: 5px;
   }
 
   h2 {
     font-weight: 400;
     color: #88b0f0;
     margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .bio {
+    background: #1c3b63;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
     margin-bottom: 30px;
   }
 
@@ -66,24 +69,20 @@
     font-size: 1.3rem;
   }
 
-  .tech-list, .projects-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  ul { list-style: none; padding: 0; margin: 0; }
 
-  .tech-list li, .projects-list li {
+  li {
     background: #224880;
     margin-bottom: 10px;
     padding: 12px 15px;
     border-radius: 10px;
     text-align: left;
-    transition: background-color 0.3s ease;
-    cursor: default;
+    transition: 0.3s;
   }
 
-  .tech-list li:hover, .projects-list li:hover {
+  li:hover {
     background-color: #3e6ccf;
+    transform: translateX(5px);
   }
 
   .projects-list a {
@@ -92,25 +91,26 @@
     font-weight: 600;
   }
 
-  .projects-list a:hover {
-    text-decoration: underline;
+  .projects-list a:hover { text-decoration: underline; }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
   }
 
-  .contact-info {
-    margin-top: 25px;
-    font-size: 1rem;
-    color: #a8c0ff;
-  }
-
-  .contact-info a {
+  .social {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #224880;
     color: #a8c0ff;
     text-decoration: none;
     font-weight: 600;
+    transition: 0.3s;
   }
 
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
+  .social:hover { background: #3e6ccf; }
 
   .btn-whatsapp {
     display: inline-block;
@@ -123,75 +123,58 @@
     font-size: 1.2rem;
     text-decoration: none;
     box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
   }
 
   .btn-whatsapp:hover {
     background-color: #1ebe5c;
     transform: scale(1.05);
   }
-
-  @media (max-width: 480px) {
-    .container {
-      padding: 30px 20px;
-      max-width: 95%;
-    }
-    h1 {
-      font-size: 1.8rem;
-    }
-    .btn-whatsapp {
-      width: 100%;
-      padding: 15px 0;
-      font-size: 1.1rem;
-    }
-  }
 </style>
 </head>
 <body>
   <main class="container" role="main">
-    <h1>Ítalo Santos</h1>
-    <h2>Desenvolvedor Front-end e Suporte</h2>
 
-    <section aria-labelledby="services-title">
-      <h3 id="services-title" class="section-title">Tecnologias</h3>
-      <ul class="tech-list" aria-label="Tecnologias que utilizo">
-        <li>JavaScript</li>
-        <li>React</li>
+    <img src="./img/minha-foto.jpg" alt="Foto de Ítalo Santos" class="profile-photo">
+
+
+    <h1>Ítalo Santos</h1>
+    <h2>Analista de Dados </h2>
+
+    <section class="bio">
+      Analista de Dados Júnior com 1 ano de experiência, atuando atualmente na Pernambuco Construtora, principalmente com Power BI e técnicas avançadas de análise para gerar insights estratégicos. Ao longo da minha trajetória, desenvolvi relatórios que contribuíram diretamente para a melhoria dos indicadores da empresa, trazendo visualizações claras e tomadas de decisão mais assertivas.<br><br>
+      Além das competências técnicas, destacam-se meu perfil colaborativo, minha iniciativa para resolver problemas, minha aptidão natural para assimilar novos conhecimentos e minha facilidade em me comunicar, qualidades que fortalecem um ambiente de trabalho produtivo e harmonioso.<br><br>
+      Também possuo projetos pessoais e acadêmicos disponíveis no meu GitHub, que demonstram minha evolução contínua na área de tecnologia e dados.
+    </section>
+
+    <section>
+      <h3 class="section-title">Tecnologias</h3>
+      <ul>
+        <li>Power BI</li>
+        <li>SQL Server</li>
+        <li>Pyhton</li>
         <li>HTML</li>
         <li>CSS</li>
       </ul>
     </section>
 
-    <section aria-labelledby="projects-title">
-      <h3 id="projects-title" class="section-title">Projetos</h3>
-      <ul class="projects-list" aria-label="Projetos desenvolvidos">
-        <li>
-          <strong>Fernanda-site:</strong>  
-          <a href="https://github.com/Italo2003/fernanda-site" target="_blank" rel="noopener noreferrer">
-            Repositório GitHub
-          </a>
-        </li>
-        <li>
-          <strong>Restaurante:</strong>  
-          <a href="https://github.com/Italo2003/Restaurante" target="_blank" rel="noopener noreferrer">
-            Repositório GitHub
-          </a>
-        </li>
+    <section>
+      <h3 class="section-title">Projetos</h3>
+      <ul class="projects-list">
+        <li><strong>Fernanda-site:</strong> <a href="https://github.com/Italosantoss03/fernanda-site" target="_blank">Repositório GitHub</a></li>
+        <li><strong>Restaurante:</strong> <a href="https://github.com/Italosantoss03/Restaurante" target="_blank">Repositório GitHub</a></li>
       </ul>
     </section>
 
-    <section aria-labelledby="contact-title">
-      <h3 id="contact-title" class="section-title">Contato</h3>
-      <p class="contact-info">
-        Email: <a href="mailto:Italosantos57053@gmail.com">Italosantos57053@gmail.com</a><br />
-        LinkedIn: <a href="https://www.linkedin.com/in/%C3%ADtalo-santos-269b242a4/" target="_blank" rel="noopener noreferrer">/ítalo-santos</a><br />
-        WhatsApp: <a href="https://wa.me/5581989544196" target="_blank" rel="noopener noreferrer">(81) 98954-4196</a>
-      </p>
-    </section>
+    <div class="social-buttons">
+      <a href="https://github.com/Italosantoss03" class="social" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/%C3%ADtalo-santos-269b242a4/" class="social" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </div>
 
-    <a href="https://wa.me/5581989544196" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Agendar contato pelo WhatsApp">
-      Agendar contato pelo WhatsApp
+    <a href="https://wa.me/5581989544196" class="btn-whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Agendar contato
     </a>
+
   </main>
 </body>
 </html>
